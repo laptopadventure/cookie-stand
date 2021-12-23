@@ -1,0 +1,190 @@
+/* highlighting */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/* title */
+@import url('https://fonts.googleapis.com/css2?family=Pushster&display=swap');
+
+/* Generic text must have a serif web font */
+* {
+  font-family: Garamond, 'Times New Roman', Times, serif;
+}
+
+/* Data text must have a sans-serif web font */
+#location-stats {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Highlighted text must have a custom google font */
+mark {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.title {
+  font-family: 'Pushster', cursive;
+}
+
+body {
+  background-color: #626477;
+}
+
+.hiddenlink {
+  color: black;
+  text-decoration: none;
+}
+
+h1 {
+  margin: 1rem;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+h2 {
+  margin: 1rem;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h3 {
+  margin: 1rem;
+  font-size: 18px;
+  font-weight: bold
+}
+
+/* headers inside page sections */
+section section > h1, section section > h2, section section > h3 {
+  margin: 0;
+  margin-top: -0.2rem;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  padding-bottom: 0.5rem;
+  color: rgba(0, 0, 0, 0.65);
+  border: 3px solid rgba(0, 0, 0, 0.3);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+ul, ol {
+  padding: 1rem;
+  padding-top: 0;
+}
+
+p {
+  margin: 1rem;
+}
+
+.introtext {
+  font-size: 20px;
+}
+
+img {
+  margin: 2rem;
+  border: 3px solid white
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  font-size: 24px;
+}
+
+section {
+  border: 3px solid white;
+  margin: 1rem auto;
+  width: 90%;
+  background-color: lightgray;
+}
+
+/* sections inside page sections */
+section section {
+  border: none;
+  margin: 2rem;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.35);
+  transition: all 0.5s ease-out;
+  background-color: rgba(252, 236, 145, 0.35);
+}
+
+section > header {
+  margin-bottom: -3px;
+}
+
+/* header buttons */
+header > a > div {
+  text-align: center;
+  /* Feel free to adjust when there are more header buttons */
+  width: 200px;
+  padding: 1rem 3rem;
+  border-width: 3px;
+  border-style: none;
+  transition: all 0.5s ease-out;
+}
+
+header > a > div:hover {
+  border-width: 6px;
+  margin-top: -3px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+#homeflex {
+  display:flex;
+  justify-content: space-between;
+}
+
+/* specific header button colors */
+
+#home {
+  background-color: #add8e6;
+  border-color: #82a3ad;
+  border-bottom-style: solid;
+}
+
+#home:hover {
+  background: #96bcc9;
+}
+
+#sales_data {
+  background-color: #ffb6c1;
+  border-color: #a17378;
+  border-bottom-style: solid;
+}
+
+#sales_data:hover {
+  background-color: #dda0a9;
+}
+
+#location_stats {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* this selector limits the enlarge effect to only sales stats */
+#location_stats section:hover {
+  transform: scale(1.2);
+}
+
+/* The following ids correspond to the section of the generated locations. They override the default section colors */
+
+#seattle {
+  background-color: lightblue;
+}
+
+#tokyo {
+  background-color: lightpink;
+}
+
+#dubai {
+  background-color: lightyellow;
+}
+
+#paris {
+  background-color: lightgreen;
+}
+
+#lima {
+  background-color: lightcyan;
+}
