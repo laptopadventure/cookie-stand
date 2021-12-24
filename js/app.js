@@ -37,7 +37,7 @@ const seattle = {
     let simulatedDay = [];
     ///total amount generated
     let total = 0;
-    for(let hourIndex = openingHour; hourIndex < closingHour; hourIndex++) {
+    for(let hourIndex = openingHour; hourIndex <= closingHour; hourIndex++) {
       let customersThisHour = this.getRandomCustomerAmt();
       //don't forget ceil, avgCookiesPerSale has decimals and you can't buy half a cookie so we assume 0.5 equals an extra cookie
       let salesThisHour = Math.ceil(customersThisHour * this.avgCookiesPerSale);
@@ -59,7 +59,7 @@ const seattle = {
     h3.textContent = this.name;
     //make a new list and append
     let ul = section.appendChild(document.createElement('ul'));
-    for(let hour = openingHour; hour < closingHour; hour++) {
+    for(let hour = openingHour; hour <= closingHour; hour++) {
       let li = ul.appendChild(document.createElement('li'));
       li.textContent = `${formatTime(hour)}: ${this.simulatedResults[hour - openingHour]}`;
     }
@@ -85,7 +85,7 @@ const tokyo = {
     let simulatedDay = [];
     ///total amount generated
     let total = 0;
-    for(let hourIndex = openingHour; hourIndex < closingHour; hourIndex++) {
+    for(let hourIndex = openingHour; hourIndex <= closingHour; hourIndex++) {
       let customersThisHour = this.getRandomCustomerAmt();
       //don't forget ceil, avgCookiesPerSale has decimals and you can't buy half a cookie so we assume 0.5 equals an extra cookie
       let salesThisHour = Math.ceil(customersThisHour * this.avgCookiesPerSale);
@@ -107,7 +107,7 @@ const tokyo = {
     h3.textContent = this.name;
     //make a new list and append
     let ul = section.appendChild(document.createElement('ul'));
-    for(let hour = openingHour; hour < closingHour; hour++) {
+    for(let hour = openingHour; hour <= closingHour; hour++) {
       let li = ul.appendChild(document.createElement('li'));
       li.textContent = `${formatTime(hour)}: ${this.simulatedResults[hour - openingHour]}`;
     }
@@ -133,7 +133,7 @@ const dubai = {
     let simulatedDay = [];
     ///total amount generated
     let total = 0;
-    for(let hourIndex = openingHour; hourIndex < closingHour; hourIndex++) {
+    for(let hourIndex = openingHour; hourIndex <= closingHour; hourIndex++) {
       let customersThisHour = this.getRandomCustomerAmt();
       //don't forget ceil, avgCookiesPerSale has decimals and you can't buy half a cookie so we assume 0.5 equals an extra cookie
       let salesThisHour = Math.ceil(customersThisHour * this.avgCookiesPerSale);
@@ -155,7 +155,7 @@ const dubai = {
     h3.textContent = this.name;
     //make a new list and append
     let ul = section.appendChild(document.createElement('ul'));
-    for(let hour = openingHour; hour < closingHour; hour++) {
+    for(let hour = openingHour; hour <= closingHour; hour++) {
       let li = ul.appendChild(document.createElement('li'));
       li.textContent = `${formatTime(hour)}: ${this.simulatedResults[hour - openingHour]}`;
     }
@@ -181,7 +181,7 @@ const paris = {
     let simulatedDay = [];
     ///total amount generated
     let total = 0;
-    for(let hourIndex = openingHour; hourIndex < closingHour; hourIndex++) {
+    for(let hourIndex = openingHour; hourIndex <= closingHour; hourIndex++) {
       let customersThisHour = this.getRandomCustomerAmt();
       //don't forget ceil, avgCookiesPerSale has decimals and you can't buy half a cookie so we assume 0.5 equals an extra cookie
       let salesThisHour = Math.ceil(customersThisHour * this.avgCookiesPerSale);
@@ -203,7 +203,7 @@ const paris = {
     h3.textContent = this.name;
     //make a new list and append
     let ul = section.appendChild(document.createElement('ul'));
-    for(let hour = openingHour; hour < closingHour; hour++) {
+    for(let hour = openingHour; hour <= closingHour; hour++) {
       let li = ul.appendChild(document.createElement('li'));
       li.textContent = `${formatTime(hour)}: ${this.simulatedResults[hour - openingHour]}`;
     }
@@ -230,7 +230,7 @@ const lima = {
     let simulatedDay = [];
     ///total amount generated
     let total = 0;
-    for(let hourIndex = openingHour; hourIndex < closingHour; hourIndex++) {
+    for(let hourIndex = openingHour; hourIndex <= closingHour; hourIndex++) {
       let customersThisHour = this.getRandomCustomerAmt();
       //don't forget ceil, avgCookiesPerSale has decimals and you can't buy half a cookie so we assume 0.5 equals an extra cookie
       let salesThisHour = Math.ceil(customersThisHour * this.avgCookiesPerSale);
@@ -252,7 +252,7 @@ const lima = {
     h3.textContent = this.name;
     //make a new list and append
     let ul = section.appendChild(document.createElement('ul'));
-    for(let hour = openingHour; hour < closingHour; hour++) {
+    for(let hour = openingHour; hour <= closingHour; hour++) {
       let li = ul.appendChild(document.createElement('li'));
       li.textContent = `${formatTime(hour)}: ${this.simulatedResults[hour - openingHour]}`;
     }
