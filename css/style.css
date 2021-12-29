@@ -157,34 +157,64 @@ footer {
   background-color: #dda0a9;
 }
 
-#location_stats {
-  display: flex;
-  justify-content: space-around;
-}
-
-/* this selector limits the enlarge effect to only sales stats */
-#location_stats section:hover {
-  transform: scale(1.2);
-}
-
 /* The following ids correspond to the section of the generated locations. They override the default section colors */
 
-#seattle {
+.seattle {
   background-color: lightblue;
 }
 
-#tokyo {
+.tokyo {
   background-color: lightpink;
 }
 
-#dubai {
+.dubai {
   background-color: lightyellow;
 }
 
-#paris {
+.paris {
   background-color: lightgreen;
 }
 
-#lima {
+.lima {
   background-color: lightcyan;
+}
+
+.totals {
+  background-color: rgb(255, 248, 184);
+}
+
+/* Table */
+
+#location_stats {
+  margin: 1.6rem auto;
+  transition: all 0.5s ease-out;
+  border-collapse: separate;
+}
+
+#location_stats:hover {
+  transform: scale(1.1);
+}
+
+table {
+  border-collapse: separate;
+}
+
+td, th {
+  text-align: center;
+  padding: 1rem;
+  border-top: solid 2px black;
+  border-left: solid 2px black;
+}
+
+td:last-child, th:last-child {
+  padding: 1rem;
+  border-right: solid 2px black;
+}
+
+tr:last-child td, tbody > tr:last-child th {
+  border-bottom: solid 2px black;
+}
+
+th {
+  font-weight: bold;
 }
