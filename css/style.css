@@ -186,6 +186,7 @@ footer {
 /* Table */
 
 #location_stats {
+  width: fit-content;
   margin: 1.6rem auto;
   transition: all 0.5s ease-out;
   border-collapse: separate;
@@ -200,21 +201,30 @@ table {
 }
 
 td, th {
+  font-weight: bold;
   text-align: center;
   padding: 1rem;
   border-top: solid 2px black;
   border-left: solid 2px black;
 }
 
+th {
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+/* warning: sinning below this point */
+
 td:last-child, th:last-child {
   padding: 1rem;
   border-right: solid 2px black;
+  border-left: solid 4px black;
 }
 
 tr:last-child td, tbody > tr:last-child th {
   border-bottom: solid 2px black;
 }
 
-th {
-  font-weight: bold;
+tfoot > tr > th {
+  border-bottom: solid 2px black;
 }

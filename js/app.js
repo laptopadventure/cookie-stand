@@ -117,21 +117,22 @@ function renderTable() {
 
 ///Must be called after rendering each StoreLocation
 function renderHourlyTotalsRow() {
-  let tbody = document.querySelector('tbody');
-  let tr = tbody.appendChild(document.createElement('tr'));
+  let table = document.querySelector('table');
+  let tfoot = table.appendChild(document.createElement('tfoot'));
+  let tr = tfoot.appendChild(document.createElement('tr'));
   //name of this row
-  let th = tr.appendChild(document.createElement('th'));
-  th.textContent = 'Totals';
+  let thRowName = tr.appendChild(document.createElement('th'));
+  thRowName.textContent = 'Totals';
   //totals for each hour
   for(let hourIndex = openingHour; hourIndex <= closingHour; hourIndex++) {
-    let td = tr.appendChild(document.createElement('td'));
-    td.textContent = totalsEachHour[hourIndex - openingHour];
-    td.classList.add('totals');
+    let th = tr.appendChild(document.createElement('th'));
+    th.textContent = totalsEachHour[hourIndex - openingHour];
+    th.classList.add('totals');
   }
   //total of all totals
-  let td = tr.appendChild(document.createElement('td'));
-  td.textContent = totalsEachDay;
-  td.classList.add('totals');
+  let th = tr.appendChild(document.createElement('th'));
+  th.textContent = totalsEachDay;
+  th.classList.add('totals');
 }
 
 renderTable();
