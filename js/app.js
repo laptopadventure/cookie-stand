@@ -19,6 +19,22 @@ function formatTime (hour) {
   return `${hour}:00${meridiem}`; //"1:00pm"
 }
 
+///returns a form's input
+function getInputValue(form, name) {
+  let fieldset = form.children[0]
+  let foundInput
+  for(let i = 0; i < fieldset.children.length; i++) {
+    let element = fieldset.children[i]
+    if(element.name === name) {
+      foundInput = element
+      break
+    }
+  }
+  if(!foundInput)
+    return 'Error'
+  return foundInput.value
+}
+
 ///returns an empty array with each index as an hour in the day set to zero.
 function cleanTotalsArray() {
   let newTotalsArray = [];
@@ -140,3 +156,25 @@ for(let storeIndex = 0; storeIndex < stores.length; storeIndex++) {
   stores[storeIndex].render();
 }
 renderHourlyTotalsRow();
+
+//form code
+
+let form = document.querySelector('form')
+
+form.addEventListener('submit', onSubmit)
+
+function onSubmit(event) {
+  event.preventDefault();
+  let form = event.target
+  let name = getInputValue(form, "name")
+  let min = getInputValue(form, "min")
+  let max = getInputValue(form, "max")
+  let avg = getInputValue(form, "avg")
+  if(!name || !min || !max || !avg)
+    return
+  let newLocation = new StoreLocation(name, min, max, avg)
+  newLocation.render()
+  let tfoot = document.querySelector('tfoot');
+  tfoot.remove()
+  renderHourlyTotalsRow()
+}
